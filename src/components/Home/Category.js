@@ -16,8 +16,8 @@ function Category() {
     <div className="category-container">
       <h1 className="category-heading">Shop by Category</h1>
       <div className="category-icons">
-          {Categories.category.map((el)=>{
-          return <img 
+          {Categories.category.map((el,index)=>{
+          return <img key = {index}
           src = {el.image} 
           alt = "category" 
           className="category-images"

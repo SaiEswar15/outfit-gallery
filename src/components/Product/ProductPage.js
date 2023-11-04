@@ -59,9 +59,9 @@ function ProductPage() {
                         onChange: (current, prev) => console.log(`current index: ${current}, prev index: ${prev}`),
                         }}
                     >
-                        {productdata && productdata.images && productdata.images.map((ele)=>{
+                        {productdata && productdata.images && productdata.images.map((ele,index)=>{
                             return (
-                                <div className = "every-image-con">
+                                <div key={index} className = "every-image-con">
                                     <Image 
                                     style = {styleObj1} 
                                     width={70}
@@ -90,8 +90,8 @@ function ProductPage() {
             <div className="product-size-con">
                 <p className="special-price">Sizes Available </p>
                 <div className="sizes-align">
-                    {productdata && productdata.sizes && productdata.sizes.map((el)=>{
-                        return <div className="sizes-align-inside">
+                    {productdata && productdata.sizes && productdata.sizes.map((el,index)=>{
+                        return <div key = {index} className="sizes-align-inside">
                         <div className="sizes-main"><p>{el}</p></div>
                         <p>{productdata.typeOfSize}</p>
                         </div>
@@ -131,19 +131,14 @@ function ProductPage() {
                 <div className="product-desc"> 
                     <p>Description :</p>
                     <br/>
-                    {productdata && productdata.description && productdata.description.map((el)=>{
-                        return <ul>
-                            <p>{el}</p>
+                    {productdata && productdata.description && productdata.description.map((el, index)=>{
+                        return <>
+                            <p key = {index}>{el}</p>
                             <br/>
-                        </ul>
+                        </>
                     })}
                     </div>
                 
-
-
-                
-                
-
                 </div>
             </div>
 
@@ -154,45 +149,3 @@ function ProductPage() {
 
 export default ProductPage;
 
-
-// import React from 'react'
-// import Navbar from '../Home/Navbar'
-// import "../../styles/ProductPage.css"
-
-// let data = {
-//     "title": "Rab Unisex Sneakers",
-//     "price1" : 6000,
-//     "price2" : 10000,
-//     "category" : "Footwear",
-//     "subCategory" : "Shoes",
-//     "typeCategory" : "Sneakers",
-//     "brand" : "Puma",
-//     "description" : "",
-//     "productStory" : "",
-//     "details" : [],
-//     "images" : "https://images.pexels.com/photos/19090/pexels-photo.jpg",
-//     "typeOfSize" : "US",
-//     "colors" : []
-// }
-
-// function ProductPage() {
-
-//     let styleObj = {
-
-//         width : '100px',
-//         height : '100px',
-//         backgroundColor : "red",
-//         backgroundImage : `url(https://images.pexels.com/photos/19090/pexels-photo.jpg)`,
-//         backgroundSize: 'contain',
-//         backgroundRepeat: 'no-repeat',
-//         backgroundPosition: 'center center',
-//     }
-//   return (
-//     <>
-//     <Navbar/>
-    
-//     </>
-//   )
-// }
-
-// export default ProductPage

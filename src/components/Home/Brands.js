@@ -12,13 +12,13 @@ function Brands() {
 
   const dispatch = useDispatch();
   const Navigate = useNavigate();
-  
+
   return (
     <div className="brand-container">
       <h1 className="brand-heading">Shop by Brands</h1>
       <div className="brand-icons">
-          {Data.brandLogos.map((el)=>{
-          return <img 
+          {Data.brandLogos.map((el, index)=>{
+          return <img key = {index}
           src = {el.image} 
           alt = "crocs" 
           className="brand-images"

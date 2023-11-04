@@ -16,9 +16,9 @@ function Products() {
 
     function addSearchData()
     {
-        console.log("hai")
+        // console.log("hai")
         let allData = datajson.products;
-        console.log(allData);
+        // console.log(allData);
         dispatch(apiActions.changeSearchData(allData));
         dispatch(apiActions.addFirstData(allData));
         Navigate("/search")
@@ -26,7 +26,7 @@ function Products() {
   return (<>
     <h1 className='deals-heading'>Trending Deals Today</h1>
     <div className='search-container'>
-        {data && data.map((el)=>{
+        {data && data.length>0 && data.map((el, index)=>{
             let styleObj = {
 
                 width : '100px',
@@ -37,9 +37,9 @@ function Products() {
                 backgroundPosition: 'center center',
             }
             return (
-                <div className='search-items' onClick = {()=>moveToProductPage(el,dispatch,Navigate,apiActions)}>
+                <div className='search-items' key={el.id || index} onClick = {()=>moveToProductPage(el,dispatch,Navigate,apiActions)}>
                     <div className='search-items-image' style={{ width: '100px', height: '100px', backgroundColor: 'white' }}>
-                        <div class="search-image" style={styleObj}></div>
+                        <div className="search-image" style={styleObj}></div>
                     </div>
                     <div className='search-items-details'>
                         <div className='search-title'><p>{el.title}</p></div>
@@ -59,10 +59,8 @@ function Products() {
                 </div>
             )
         })}
-        <div className='search-items' onClick = {addSearchData}>
-            
+        <div className='search-items' onClick={addSearchData}>
             <p>See all Products</p>
-            
         </div>
     </div>
     </>

@@ -33,9 +33,9 @@ function SearchPage() {
                 backgroundPosition: 'center center',
             }
             return (
-                <div className='search-items' onClick = {()=>moveToProductPage(el,dispatch,Navigate,apiActions)}>
+                <div className='search-items' key= {el.id} onClick = {()=>moveToProductPage(el,dispatch,Navigate,apiActions)}>
                     <div className='search-items-image' style={{ width: '100px', height: '100px', backgroundColor: 'white' }}>
-                        <div class="search-image" style={styleObj}></div>
+                        <div className="search-image" style={styleObj}></div>
                     </div>
                     <div className='search-items-details'>
                         <div className='search-title'><p>{el.title}</p></div>
