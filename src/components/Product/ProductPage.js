@@ -9,7 +9,7 @@ function ProductPage() {
 
    let productdata = useSelector((state)=>state.api.productData)
 
-
+    let phoneNumber = 9491905897;
 
     let styleObj = {
 
@@ -35,6 +35,14 @@ function ProductPage() {
     useEffect(() => {
         window.scrollTo(0, 0); // Scroll to the top of the page
       }, []);
+
+
+    function purchase(productdata)
+    {
+        console.log(productdata);
+        const whatsappLink = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=I want to buy this/these ${productdata.subCategory}: ${productdata.images[0]} named ${productdata.title} of size ${productdata.sizes[0]} for price ${productdata.price1}`;
+        window.location.href = whatsappLink;
+    }
   
   
   return (
@@ -85,7 +93,7 @@ function ProductPage() {
                 </div>
 
                 <div className="image-below-buttons">
-                    <button className='buyNow-btn'>Buy from Whatsapp</button>
+                    <button className='buyNow-btn' onClick = {()=>{purchase(productdata)}}>Buy from Whatsapp</button>
                 </div>
             </div>
 
