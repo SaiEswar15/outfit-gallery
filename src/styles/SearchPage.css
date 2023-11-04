@@ -1,0 +1,145 @@
+.search-container{
+    margin : 0.5rem;
+    display : grid;
+    grid-template-columns: 1fr 1fr;
+    gap : 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-items{
+    
+    height : 20rem;
+    background-color: rgb(244, 243, 241);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    /* padding : 1rem; */
+}
+
+.search-items-image{
+    margin : 0px 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border : 1px solid lightgrey;
+    
+}
+
+.search-items-details{
+    margin : 0px 0.5rem;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+
+.search-title{
+    /* background-color: rgb(190, 246, 208); */
+    height : 2.8rem;
+    overflow: hidden;
+    text-align: center; 
+    color :rgb(0, 111, 180);
+    
+}
+
+
+
+.search-price{
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+    font-family :'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.search-price2{
+    font-size: small;
+    font-style: italic;
+    text-decoration-line: line-through;
+}
+
+.search-special-price
+{
+    margin-top: 0.5rem;
+}
+
+.search-sizes-align
+{
+    display : flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap : 1rem;
+    margin-top: 0.5rem;
+    
+}
+
+.search-sizes-align-inside
+{
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap : 0.5rem;
+}
+
+.out-of-stock
+{
+    /* background-color: aqua; */
+    width : 100vw;
+}
+
+@media (min-width : 475px) {}
+@media (min-width : 640px) {}
+@media (min-width : 768px) {
+    .search-container
+    {
+        margin : 0.5rem;
+        display : grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap : 0.5rem;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (min-width : 1024px) {}
+@media (min-width : 1280px) {}
+@media (min-width : 1440px) {
+
+    .search-title
+    {
+        margin-top: 1rem;
+        /* background-color: rgb(190, 246, 208); */
+        height : 1.5rem;
+        overflow: hidden;
+        text-align: center; 
+        color :rgb(0, 111, 180);
+    }
+
+    .search-items-details
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+    
+}
+@media (min-width : 2560px) {
+    .search-container
+    {
+        margin-top : 0.5rem;
+        margin-left: 10%;
+        margin-right: 10%;
+        display : grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap : 0.5rem;
+        justify-content: center;
+        align-items: center;
+    }
+}

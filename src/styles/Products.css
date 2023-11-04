@@ -1,0 +1,20 @@
+.deals-heading
+{
+    margin-left : 1rem;
+    font-family :'Times New Roman', Times, serif;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+@media (min-width : 2560px) {
+    .deals-heading
+    {
+        margin-top : 0.5rem;
+        margin-left: 10%;
+        margin-right: 10%;
+        font-family :'Times New Roman', Times, serif;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding-left : 1rem;
+    }
+}
