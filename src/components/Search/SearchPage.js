@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Navbar from '../Home/Navbar'
 // import data from "../../data/data.json"
 import "../../styles/SearchPage.css"
@@ -16,6 +16,10 @@ function SearchPage() {
     const Navigate = useNavigate();
 
     const data = useSelector((state)=>state.api.searchData);
+
+    useEffect(() => {
+        window.scrollTo(0, 0); // Scroll to the top of the page
+      }, []);
 
   return (
     <>

@@ -25,7 +25,7 @@ function Products() {
     }
   return (<>
     <h1 className='deals-heading'>Trending Deals Today</h1>
-    <div className='search-container'>
+    <div className='pro-container'>
         {data && data.length>0 && data.map((el, index)=>{
             let styleObj = {
 
@@ -37,20 +37,20 @@ function Products() {
                 backgroundPosition: 'center center',
             }
             return (
-                <div className='search-items' key={el.id || index} onClick = {()=>moveToProductPage(el,dispatch,Navigate,apiActions)}>
-                    <div className='search-items-image' style={{ width: '100px', height: '100px', backgroundColor: 'white' }}>
-                        <div className="search-image" style={styleObj}></div>
+                <div className='pro-items' key={el.id || index} onClick = {()=>moveToProductPage(el,dispatch,Navigate,apiActions)}>
+                    <div className='pro-items-image' style={{ width: '100px', height: '100px', backgroundColor: 'white' }}>
+                        <div className="pro-image" style={styleObj}></div>
                     </div>
-                    <div className='search-items-details'>
-                        <div className='search-title'><p>{el.title}</p></div>
-                        <p className='search-price'>Rs. {el.price1}/-</p>
-                        <p className='search-price2'>M.R.P : {el.price2}/-</p>
+                    <div className='pro-items-details'>
+                        <div className='pro-title'><p>{el.title}</p></div>
+                        <p className='pro-price'>Rs. {el.price1}/-</p>
+                        <p className='pro-price2'>M.R.P : {el.price2}/-</p>
 
-                        <p className="search-special-price">Sizes Available </p>
-                        <div className="search-sizes-align">
+                        <p className="pro-special-price">Sizes Available </p>
+                        <div className="pro-sizes-align">
                             {el.sizes && el.sizes.map((ele)=>{
-                                return <div className="search-sizes-align-inside">
-                                <p className="search-sizes-main">{ele}</p>
+                                return <div className="pro-sizes-align-inside">
+                                <p className="pro-sizes-main">{ele}</p>
                                 </div>
                             })}
                         </div>
@@ -59,7 +59,7 @@ function Products() {
                 </div>
             )
         })}
-        <div className='search-items' onClick={addSearchData}>
+        <div className='pro-items' onClick={addSearchData}>
             <p>See all Products</p>
         </div>
     </div>

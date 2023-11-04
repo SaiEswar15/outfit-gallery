@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React,{useEffect} from 'react';
 import Navbar from '../Home/Navbar'
 import "../../styles/ProductPage.css"
 import { Image } from 'antd';
@@ -32,7 +32,9 @@ function ProductPage() {
         backgroundColor : `${productdata.color}`
     }
 
-    
+    useEffect(() => {
+        window.scrollTo(0, 0); // Scroll to the top of the page
+      }, []);
   
   
   return (
@@ -49,7 +51,7 @@ function ProductPage() {
 
             <div className='product-image-con'>
                 <div className="image-holder">
-                    <div class="product-picture" style={styleObj}></div>
+                    <div className="product-picture" style={styleObj}></div>
                 </div>
 
                 <div className='product-preview'>
