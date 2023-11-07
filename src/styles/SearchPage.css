@@ -11,6 +11,9 @@
     
     height : 20rem;
     background-color: rgb(244, 243, 241);
+    background-image: url("../../public/brands/backgroundart.jpg");
+    background-repeat: repeat;
+    background-size: contain;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -14,7 +14,7 @@ function Brands() {
   const Navigate = useNavigate();
 
   return (
-    <div className="brand-container">
+    <div className="brand-container" id = "brands-con">
       <h1 className="brand-heading">Shop by Brands</h1>
       <div className="brand-icons">
           {Data.brandLogos.map((el, index)=>{

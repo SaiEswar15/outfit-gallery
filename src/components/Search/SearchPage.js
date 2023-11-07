@@ -26,7 +26,7 @@ function SearchPage() {
 
         async function getDataFromLocal()
         {
-            let searchdata = localStorage.getItem("searchDataOG");
+            let searchdata = sessionStorage.getItem("searchDataOG");
             if(searchdata)
             {
                 console.log(searchdata, "if entered")

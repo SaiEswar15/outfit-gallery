@@ -3,7 +3,7 @@ export function moveToProductPage(el,dispatch,Navigate,apiActions)
     console.log(el);
     dispatch(apiActions.changeProductData(el))
     dispatch(apiActions.changeLoginStatus(true))
-    localStorage.setItem("productDataOG",JSON.stringify(el))
+    sessionStorage.setItem("productDataOG",JSON.stringify(el))
     Navigate("/products")
 }
 
@@ -16,6 +16,7 @@ export function searchByBrand(el,dispatch,Navigate,apiActions,Data)
     })
     dispatch(apiActions.changeSearchData(brandData))
     dispatch(apiActions.addFirstData(brandData));
+    sessionStorage.setItem("productDataOG",JSON.stringify(brandData))
     Navigate("/search");
 }
 
@@ -28,6 +29,24 @@ export function searchByCategory(el,dispatch,Navigate,apiActions,Data)
     })
     dispatch(apiActions.changeSearchData(categoryArray))
     dispatch(apiActions.addFirstData(categoryArray));
+    sessionStorage.setItem("productDataOG",JSON.stringify(categoryArray))
     Navigate("/search");
+}
+
+export function toggle()
+{
+    const sidebar = document.getElementsByClassName(".sidebar")
+    const sidebarOpen = document.getElementsByClassName(".sidebarOpen")
+    if (sidebar.classList.contains('sidebarClosed')) {
+        // Open the sidebar
+        sidebar.classList.remove('sidebarClosed');
+        sidebar.style.transform = 'translateX(0)';
+        sidebarOpen.style.marginLeft = '250px'; // Adjust to match your sidebar width
+    } else {
+        // Close the sidebar
+        sidebar.classList.add('sidebarClosed');
+        sidebar.style.transform = 'translateX(-250px)';
+        sidebarOpen.style.marginLeft = '0';
+    }
 }
 

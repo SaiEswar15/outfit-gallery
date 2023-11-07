@@ -45,7 +45,7 @@ function ProductPage() {
     useEffect(()=>{
         async function getProductData()
         {
-            let data = localStorage.getItem("productDataOG");
+            let data = sessionStorage.getItem("productDataOG");
             if(data)
             {
                 let parsedData = JSON.parse(data);
@@ -124,7 +124,7 @@ function ProductPage() {
                 </div>
 
                 <div className="image-below-buttons">
-                    <button className='buyNow-btn' onClick = {()=>{purchase(productdata)}}>Buy from Whatsapp</button>
+                    <button className='buyNow-btn' onClick = {()=>{purchase(productdata)}}>Reserve from Whatsapp</button>
                     <p>Note :</p>
                     <p>(outfit gallery is not a home delivery system)</p>
                     <p>(App is only to showcase what products we have)</p>

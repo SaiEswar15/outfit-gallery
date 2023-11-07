@@ -4,10 +4,12 @@ import Navbar from './Navbar'
 import Category from './Category'
 import Products from './Products'
 
+
 function HomePage() {
   return (
     <>
     <Navbar></Navbar>
+    
     <Products></Products>
     <Brands></Brands>
     <Category></Category>

@@ -6,6 +6,10 @@
 .brand-icons
 {
     background-color: rgb(248, 248, 233);
+    background-image: url("../../public/brands/backgroundart3.jpg");
+    
+    background-repeat: repeat;
+    background-size: contain;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -21,11 +25,12 @@
     width : 9rem;
     height : 9rem;
     border: 1px solid black;
+    box-shadow : 0 0 6px 1px rgb(145, 145, 145);
 }
 
 .brand-heading{
     margin-left : 1rem;
-    font-family :'Times New Roman', Times, serif;
+    font-family :sans-serif;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
