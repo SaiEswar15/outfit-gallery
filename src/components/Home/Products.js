@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux';
 import { apiActions } from '../../store/apiSlice';
 import { useNavigate } from 'react-router-dom';
 import { moveToProductPage } from '../../utilities/searchUtilities';
+import 'animate.css';
 
 function Products() {
 
@@ -22,11 +23,11 @@ function Products() {
         dispatch(apiActions.changeSearchData(allData));
         dispatch(apiActions.addFirstData(allData));
         dispatch(apiActions.changeLoginStatus(true));
-        localStorage.setItem("searchDataOG", JSON.stringify(allData));
+        sessionStorage.setItem("searchDataOG", JSON.stringify(allData));
         Navigate("/search")
     }
   return (<div className='products-main-container'>
-    <h1 className='deals-heading'>Trending Deals Today</h1>
+    <h1 className='deals-heading animate__animated animate__slideInLeft'>Trending Deals Today</h1>
     <div className='pro-container'>
         {data && data.length>0 && data.map((el, index)=>{
             let styleObj = {

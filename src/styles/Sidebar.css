@@ -1,8 +1,17 @@
-.nav-container
+.sidebar
 {
-    background-color: white;
+    background-color: beige;
+    width : 80vw;
+    height : 100%;
+    position : absolute;
+    z-index: 3;
+}
+
+.sidebar-nav-container
+{
+    background-color: beige; 
     /* margin : 0.5rem; */
-    width: 100vw;
+    width: 80vw;
     display : flex;
     flex-direction: row;
     justify-content: space-between;
@@ -12,7 +21,7 @@
     z-index: 2;
 }
 
-.menuOutlined
+.sidebar-menuOutlined
 {
     /* margin-right : 0.5rem; */
     width : 100px;
@@ -24,22 +33,21 @@
     align-items: center;
 }
 
-.outfit-gallery
+.sidebar-outfit-gallery
 {
     font-family : 'Courier New', Courier, monospace;
     font-size: 1.2rem;
     margin-left : 0.5rem;
 }
 
-.menuOutlined-main
-{
-    font-size: 30px;
+.sidebar-container {
+    padding-top : 7rem;
 }
 
 @media (min-width : 475px) {}
 @media (min-width : 640px) {}
 @media (min-width : 768px) {
-    .outfit-gallery
+    .sidebar-outfit-gallery
     {
         font-family : 'Courier New', Courier, monospace;
         font-size: 1.5rem;
@@ -47,7 +55,7 @@
     }
 }
 @media (min-width : 1024px) {
-    .outfit-gallery
+    .sidebar-outfit-gallery
     {
         font-family : 'Courier New', Courier, monospace;
         font-size: 1.6rem;
@@ -57,7 +65,7 @@
 @media (min-width : 1280px) {}
 @media (min-width : 1440px) {}
 @media (min-width : 2560px) {
-    .nav-container
+    .sidebar-nav-container
     {
         /* background-color: rgb(231, 246, 251); */
         margin-top : 0.5rem;
