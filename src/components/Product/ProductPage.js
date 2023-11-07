@@ -15,7 +15,7 @@ function ProductPage() {
    let productdata = useSelector((state)=>state.api.productData)
    const loggedin = useSelector((state)=>state.api.loggedin);
 
-    let phoneNumber = 9491905897;
+    let phoneNumber = 9110380472;
 
     let styleObj = {
 
