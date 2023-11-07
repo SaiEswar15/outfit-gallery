@@ -2,6 +2,8 @@ export function moveToProductPage(el,dispatch,Navigate,apiActions)
 {
     console.log(el);
     dispatch(apiActions.changeProductData(el))
+    dispatch(apiActions.changeLoginStatus(true))
+    localStorage.setItem("productDataOG",JSON.stringify(el))
     Navigate("/products")
 }
 
@@ -13,6 +15,7 @@ export function searchByBrand(el,dispatch,Navigate,apiActions,Data)
         return el.brand === brand;
     })
     dispatch(apiActions.changeSearchData(brandData))
+    dispatch(apiActions.addFirstData(brandData));
     Navigate("/search");
 }
 
@@ -24,6 +27,7 @@ export function searchByCategory(el,dispatch,Navigate,apiActions,Data)
         return ele.typeCategory === cat;
     })
     dispatch(apiActions.changeSearchData(categoryArray))
+    dispatch(apiActions.addFirstData(categoryArray));
     Navigate("/search");
 }
 

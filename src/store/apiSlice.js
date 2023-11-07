@@ -5,7 +5,8 @@ const apiSlice = createSlice({
     initialState : {
         productData : "",
         searchData : [],
-        firstData : []
+        firstData : [],
+        loggedin : false,
     },
     reducers : {
 
@@ -18,6 +19,7 @@ const apiSlice = createSlice({
         },
         changeProductData(state,action)
         {
+            console.log("IIin", action.payload)
             return{
                 ...state,
                 productData : action.payload
@@ -36,6 +38,13 @@ const apiSlice = createSlice({
             return{
                 ...state,
                 firstData : action.payload
+            }
+        },
+        changeLoginStatus(state,action)
+        {
+            return{
+                ...state,
+                loggedin : action.payload
             }
         }
         
