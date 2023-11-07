@@ -16,10 +16,39 @@ function SearchPage() {
     const Navigate = useNavigate();
 
     const data = useSelector((state)=>state.api.searchData);
+    const loggedin = useSelector((state)=>state.api.loggedin);
 
     useEffect(() => {
         window.scrollTo(0, 0); // Scroll to the top of the page
-      }, []);
+    }, []);
+
+    useEffect(()=>{
+
+        async function getDataFromLocal()
+        {
+            let searchdata = localStorage.getItem("searchDataOG");
+            if(searchdata)
+            {
+                console.log(searchdata, "if entered")
+                let parsedData = JSON.parse(searchdata);
+                dispatch(apiActions.changeSearchData(parsedData))
+                dispatch(apiActions.addFirstData(parsedData));
+                dispatch(apiActions.changeLoginStatus(true));
+            }
+            else
+            {
+                Navigate("/")
+            }
+            
+        }
+
+        if(!loggedin)
+        {
+            getDataFromLocal()
+        }
+        
+        
+    },[ dispatch,Navigate,loggedin]) 
 
   return (
     <>

@@ -3,11 +3,17 @@ import React,{useEffect} from 'react';
 import Navbar from '../Home/Navbar'
 import "../../styles/ProductPage.css"
 import { Image } from 'antd';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { apiActions } from '../../store/apiSlice';
+import { useNavigate } from 'react-router-dom';
 
 function ProductPage() {
 
+    const dispatch = useDispatch();
+    const Navigate = useNavigate();
+
    let productdata = useSelector((state)=>state.api.productData)
+   const loggedin = useSelector((state)=>state.api.loggedin);
 
     let phoneNumber = 9491905897;
 
@@ -16,7 +22,7 @@ function ProductPage() {
         width : '100%',
         height : '50vh',
         backgroundColor : "rgb(246, 246, 246)",
-        backgroundImage : `url(${productdata.images[0]})`,
+        backgroundImage : `url(${productdata && productdata.images[0]})`,
         backgroundSize: 'contain',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center center',
@@ -34,7 +40,32 @@ function ProductPage() {
 
     useEffect(() => {
         window.scrollTo(0, 0); // Scroll to the top of the page
-      }, []);
+    }, []);
+
+    useEffect(()=>{
+        async function getProductData()
+        {
+            let data = localStorage.getItem("productDataOG");
+            if(data)
+            {
+                let parsedData = JSON.parse(data);
+                dispatch(apiActions.changeProductData(parsedData));
+                dispatch(apiActions.changeLoginStatus(true));
+            }
+            else
+            {
+                Navigate("/")
+            }
+            
+        }
+        
+
+        if(!loggedin)
+        {
+            getProductData();
+        }
+        
+    },[dispatch, loggedin, Navigate])
 
 
     function purchase(productdata)
@@ -94,6 +125,12 @@ function ProductPage() {
 
                 <div className="image-below-buttons">
                     <button className='buyNow-btn' onClick = {()=>{purchase(productdata)}}>Buy from Whatsapp</button>
+                    <p>Note :</p>
+                    <p>(outfit gallery is not a home delivery system)</p>
+                    <p>(App is only to showcase what products we have)</p>
+                    <p>(To buy the products you have to visit the outlet.)</p>
+                    <p>(click the above button to reserve product through whatsapp)</p>
+                    <p>(you will recieve the location on whatsapp)</p>
                 </div>
             </div>
 

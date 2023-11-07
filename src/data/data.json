@@ -253,6 +253,14 @@
         {
             "category" : "Oxfords",
             "image" : "/categories/oxford.jpg"
+        },
+        {
+            "category" : "Cricket Shoes",
+            "image" : "/categories/cricket.jpg"
+        },
+        {
+            "category" : "Football Shoes",
+            "image" : "/categories/football.jpg"
         }
         
         

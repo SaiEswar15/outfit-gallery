@@ -20,7 +20,7 @@ function Navbar() {
       </div>
       <div className='menuOutlined'>
         <Space>
-          <MenuOutlined style={{ fontSize: '50px' }}/>
+          <MenuOutlined style={{ fontSize: '30px' }}/>
         </Space>
       </div>
     </div>
