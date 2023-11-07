@@ -16,7 +16,7 @@ export function searchByBrand(el,dispatch,Navigate,apiActions,Data)
     })
     dispatch(apiActions.changeSearchData(brandData))
     dispatch(apiActions.addFirstData(brandData));
-    sessionStorage.setItem("productDataOG",JSON.stringify(brandData))
+    sessionStorage.setItem("searchDataOG",JSON.stringify(brandData))
     Navigate("/search");
 }
 
@@ -29,7 +29,7 @@ export function searchByCategory(el,dispatch,Navigate,apiActions,Data)
     })
     dispatch(apiActions.changeSearchData(categoryArray))
     dispatch(apiActions.addFirstData(categoryArray));
-    sessionStorage.setItem("productDataOG",JSON.stringify(categoryArray))
+    sessionStorage.setItem("searchDataOG",JSON.stringify(categoryArray))
     Navigate("/search");
 }
 
