@@ -7,6 +7,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { apiActions } from '../../store/apiSlice';
 import { useNavigate } from 'react-router-dom';
 
+import { HelmetProvider } from 'react-helmet-async';
+
 function ProductPage() {
 
     const dispatch = useDispatch();
@@ -77,6 +79,13 @@ function ProductPage() {
   
   
   return (
+    <>
+    <HelmetProvider>
+      <title>Outfit Gallery Product</title>
+      <meta name = "keywords" content = "Outfit Gallery, Visakhapatnam, Shoes, Shopping, Chaitanya Katta, Marripalem, Online Display Shopping, Outlet"/>
+      <meta name = "description" content = "Shoes outlet in Visakhapatnam with lowest prices of premium quality brands. This page gives you the detailed view of your selected product and extra details and pictures"/>
+      <link rel="canonical" href='/products'/>
+    </HelmetProvider>
     <div className='productpage-start'>
         <Navbar></Navbar>
         {productdata && 
@@ -191,6 +200,7 @@ function ProductPage() {
 
         </div>}
     </div>
+    </>
   )
 }
 

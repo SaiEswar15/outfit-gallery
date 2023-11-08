@@ -9,6 +9,7 @@ import { moveToProductPage } from '../../utilities/searchUtilities';
 import { RobotOutlined } from '@ant-design/icons';
 import { Button, Result } from 'antd';
 import Functionality from './Functionality';
+import { HelmetProvider } from 'react-helmet-async';
 
 function SearchPage() {
     console.log("Search");
@@ -52,6 +53,12 @@ function SearchPage() {
 
   return (
     <>
+    <HelmetProvider>
+      <title>Outfit Gallery Collections</title>
+      <meta name = "keywords" content = "Outfit Gallery, Visakhapatnam, Shoes, Shopping, Chaitanya Katta, Marripalem, Online Display Shopping, Outlet"/>
+      <meta name = "description" content = "The entire shoe collection of the Outfit Gallery displayed in a single page at affordable prices"/>
+      <link rel="canonical" href='/search'/>
+    </HelmetProvider>
     <Navbar></Navbar>
     <Functionality></Functionality>
     <div className='search-container'>
