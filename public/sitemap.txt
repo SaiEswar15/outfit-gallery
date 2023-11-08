@@ -1,0 +1,3 @@
+https://outfitgallery.netlify.app/
+https://outfitgallery.netlify.app/search
+https://outfitgallery.netlify.app/products
