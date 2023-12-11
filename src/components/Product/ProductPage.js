@@ -6,6 +6,7 @@ import { Image } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 import { apiActions } from '../../store/apiSlice';
 import { useNavigate } from 'react-router-dom';
+import datajson from "../../data/data.json"
 
 import { HelmetProvider } from 'react-helmet-async';
 
@@ -56,7 +57,10 @@ function ProductPage() {
             }
             else
             {
-                Navigate("/")
+                
+                let data = datajson.products;
+                dispatch(apiActions.changeProductData(data));
+                dispatch(apiActions.changeLoginStatus(true));
             }
             
         }

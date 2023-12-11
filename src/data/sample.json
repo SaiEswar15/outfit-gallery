@@ -1,0 +1,27 @@
+{
+    "id" : 1,
+    "title": "",
+    "price1" : 2691,
+    "price2" : 6599,
+    "category" : "Footwear",
+    "subCategory" : "Shoes",
+    "typeCategory" : "Trainers",
+    "brand" : "Puma",
+    "description" : [
+        "Add a new dimension to your look in bold strides. The revolution of self-expression starts here: with disruptive shapes and bright contrasts that make their mark on the world – just like you.",
+        "Running System: PUMA's comfortable cushioning technology celebrates the reinvention of a unique moment and movement in culture",
+        "Style: 390025_08",
+        "Color: PUMA White-Ash Gray"
+    ],
+    "productStory" : "Introducing the perfect shoe: Comfort, style, and quality in one. Elevate your every step with our exceptional design. Experience the future of footwear.",
+    "details" : [],
+    "images" : [
+        "https://rukminim2.flixcart.com/image/832/832/ktrk13k0/shoe/z/0/b/10-386922-10-puma-white-high-risk-red-original-imag7f2htzamwgap.jpeg?q=70",
+        "https://rukminim2.flixcart.com/image/832/832/ktrk13k0/shoe/p/m/f/10-386922-10-puma-white-high-risk-red-original-imag7f2hgugthvsh.jpeg?q=70",
+        "https://rukminim2.flixcart.com/image/832/832/ktrk13k0/shoe/k/d/q/10-386922-10-puma-white-high-risk-red-original-imag7f2hjvydywya.jpeg?q=70",
+        "https://rukminim2.flixcart.com/image/832/832/ktrk13k0/shoe/h/j/q/10-386922-10-puma-white-high-risk-red-original-imag7f2hwz8vhpbg.jpeg?q=70"
+    ],
+    "sizes" : [8,9,10,12],
+    "typeOfSize" : "US",
+    "color" : "white"
+}
