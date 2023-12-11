@@ -1,0 +1,46 @@
+.Homepopup{
+    
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding : 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-family: sans-serif;
+}
+
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .marquee-content {
+    display: inline-block;
+    animation: marquee 45s linear infinite;
+  }
+
+  .marquee-note
+  {
+    background-color: yellow;
+    padding: 0.5rem;
+    font-weight: bold;
+  }
+
+  .marquee-identity
+  {
+    background-color: green;
+    color : white;
+    padding: 0.5rem;
+    font-weight: bold;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+    
+  }
