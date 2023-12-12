@@ -5,8 +5,6 @@ import HomePage from "./components/Home/HomePage";
 import SearchPage from "./components/Search/SearchPage";
 import ProductPage from "./components/Product/ProductPage";
 
-
-
 export default function App() {
   return (
     <>
